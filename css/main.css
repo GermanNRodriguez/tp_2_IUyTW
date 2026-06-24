@@ -1,20 +1,348 @@
+/* --- CONFIGURACIÓN GENERAL --- */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
 body {
-  font-family: 'Titillium Web', sans-serif;
+    background-color: #111111;
+    color: #ffffff;
+    font-family: 'Inter', sans-serif;
+    line-height: 1.6;
+    padding: 0 20px;
 }
 
-.navbar-brand {
-  font-size: 20px;
-  color: #000;
-  font-weight: bold;
+a {
+    color: inherit;
+    text-decoration: none;
 }
 
-#testimonial {
-  background: #f1f1f1;
-  padding: 50px 0 30px 0;
-  text-align:center;
-  margin-top: 40px;
+hr.divider {
+    border: 0;
+    height: 1px;
+    background: #222;
+    max-width: 1000px;
+    margin: 60px auto;
 }
 
-footer {
-  background: url(../img/smartphones.png);
+/* --- NAVBAR --- */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 30px 0;
+}
+
+.navbar .logo {
+    font-size: 1.5rem;
+    font-weight: 700;
+    font-style: italic;
+}
+
+.navbar nav a {
+    margin-left: 30px;
+    font-size: 0.9rem;
+    color: #aaaaaa;
+    transition: color 0.3s;
+}
+
+.navbar nav a:hover {
+    color: #ffffff;
+}
+
+/* --- HERO SECTION --- */
+.hero {
+    text-align: center;
+    max-width: 700px;
+    margin: 60px auto 40px auto;
+}
+
+.avatar-container {
+    margin-bottom: 20px;
+}
+
+.avatar {
+    width: 110px;
+    height: 110px;
+    border-radius: 50%;
+    padding: 5px;
+}
+
+.hero h1 {
+    font-size: 3rem;
+    font-weight: 700;
+    line-height: 1.2;
+    margin-bottom: 20px;
+    letter-spacing: -1px;
+}
+
+.hero h1 .highlight {
+    background: linear-gradient(90deg, #ff7b00, #ff007f);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.hero-description {
+    color: #888888;
+    font-size: 1rem;
+    margin-bottom: 30px;
+}
+
+.hero-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+}
+
+.btn {
+    padding: 12px 30px;
+    border-radius: 25px;
+    font-weight: 600;
+    font-size: 0.9rem;
+    transition: all 0.3s ease;
+}
+
+.btn-primary {
+    background-color: #ffffff;
+    color: #111111;
+}
+
+.btn-primary:hover {
+    background-color: #dddddd;
+}
+
+.btn-secondary {
+    background-color: transparent;
+    color: #ffffff;
+    border: 1px solid #ffffff;
+}
+
+.btn-secondary:hover {
+    background-color: #ffffff;
+    color: #111111;
+}
+
+/* --- TECH STACK --- */
+.tech-stack {
+    text-align: center;
+    margin: 60px 0;
+}
+
+.stack-title {
+    font-size: 0.8rem;
+    color: #666666;
+    letter-spacing: 2px;
+    margin-bottom: 20px;
+}
+
+.logos-container {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    font-size: 2rem;
+    color: #444444;
+}
+
+.tech-icon i {
+    transition: color 0.3s;
+}
+
+.tech-icon:hover i {
+    color: #ffffff;
+}
+
+/* --- SECTIONS GENERAL --- */
+.section-title {
+    text-align: center;
+    font-size: 1.5rem;
+    letter-spacing: 2px;
+    margin-bottom: 40px;
+}
+
+.title-orange { color: #ff6b4a; }
+.title-blue { color: #4a90e2; }
+
+/* --- PROJECTS --- */
+.projects {
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.projects-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 25px;
+}
+
+.project-card {
+    background-color: #181818;
+    border-radius: 15px;
+    overflow: hidden;
+    border: 1px solid #222;
+    transition: transform 0.3s;
+    cursor: pointer;
+}
+
+.project-card:hover {
+    transform: translateY(-5px);
+}
+
+.card-image {
+    height: 220px;
+    background-size: cover;
+    background-position: center;
+}
+
+.card-footer {
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.card-click {
+    font-size: 0.7rem;
+    color: #666666;
+    display: block;
+    margin-bottom: 5px;
+}
+
+.card-footer h3 {
+    font-size: 1.1rem;
+    font-weight: 600;
+}
+
+.arrow-icon {
+    font-size: 1.2rem;
+    color: #666666;
+}
+
+/* --- EXPERIENCE (TIMELINE) --- */
+.experience {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.timeline {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+}
+
+.timeline-item {
+    background-color: transparent;
+}
+
+.timeline-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.company-info {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.company-logo {
+    width: 28px;
+    height: 28px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    font-size: 0.9rem;
+}
+
+.google-color { background-color: #ffffff; color: #4285F4; }
+.apple-color { background-color: #ffffff; color: #000000; }
+.meta-color { background-color: #0081FB; color: #ffffff; }
+
+.timeline-header h3 {
+    font-size: 1.1rem;
+    font-weight: 600;
+}
+
+.timeline-date {
+    font-size: 0.85rem;
+    color: #555555;
+}
+
+.timeline-body {
+    color: #777777;
+    font-size: 0.9rem;
+    padding-left: 40px; /* Alineado con el texto del título omitiendo el logo */
+}
+
+/* --- FOOTER / CONTACT --- */
+.footer {
+    background-color: #0c0c0c;
+    margin: 80px -20px 0 -20px; /* Para expandirse al borde de la pantalla */
+    padding: 60px 20px;
+    text-align: left;
+}
+
+.footer-content {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.footer h2 {
+    font-size: 1.8rem;
+    margin-bottom: 20px;
+}
+
+.footer-description {
+    color: #666666;
+    font-size: 0.95rem;
+    margin-bottom: 30px;
+    max-width: 700px;
+}
+
+.footer-email {
+    margin-bottom: 30px;
+    font-size: 0.95rem;
+    color: #888888;
+}
+
+.footer-email a:hover {
+    color: #ffffff;
+    text-decoration: underline;
+}
+
+.footer-socials {
+    display: flex;
+    gap: 20px;
+    font-size: 1.2rem;
+    color: #666666;
+}
+
+.footer-socials a:hover {
+    color: #ffffff;
+}
+
+/* --- RESPONSIVE --- */
+@media (max-width: 768px) {
+    .projects-grid {
+        grid-template-columns: 1fr;
+    }
+    .timeline-header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 5px;
+    }
+    .timeline-date {
+        padding-left: 40px;
+    }
+    .hero h1 {
+        font-size: 2.2rem;
+    }
 }

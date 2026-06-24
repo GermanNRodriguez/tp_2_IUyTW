@@ -1,0 +1,10 @@
+URL Git:
+
+https://github.com/GermanNRodriguez/tp_2_IUyTW
+
+URL de publicación:
+
+https://germannrodriguez.github.io/tp_2_IUyTW/
+
+
+Todo está en la branch gh-pages
